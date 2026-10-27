@@ -1,0 +1,437 @@
+
+.ssms-register-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  font-family: inherit;
+}
+
+.ssms-register-layout {
+  width: 100%;
+  max-width: 1180px;
+  min-height: 740px;
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+}
+
+/* Branding panel */
+
+.ssms-register-brand {
+  display: flex;
+  flex-direction: column;
+  padding: 42px 44px 30px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 10% 90%, rgba(56, 189, 248, 0.18), transparent 40%),
+    linear-gradient(145deg, #102c56 0%, #164e8b 55%, #087eaa 100%);
+}
+
+.ssms-register-logo,
+.ssms-register-mobile-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ssms-register-logo:hover,
+.ssms-register-mobile-logo:hover {
+  color: inherit;
+}
+
+.ssms-register-brand-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  color: #fff;
+  background: #0ea5e9;
+  font-size: 22px;
+}
+
+.ssms-register-highlight {
+  color: #38bdf8;
+}
+
+.ssms-register-brand-content {
+  margin: auto 0;
+  padding: 46px 0;
+}
+
+.ssms-register-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #bae6fd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  line-height: 1.8;
+}
+
+.ssms-register-brand-content h1 {
+  margin: 0 0 22px;
+  font-size: clamp(36px, 3.5vw, 50px);
+  font-weight: 800;
+  letter-spacing: -1.7px;
+  line-height: 1.15;
+}
+
+.ssms-register-brand-content h1 span {
+  color: #38bdf8;
+}
+
+.ssms-register-brand-content > p {
+  max-width: 390px;
+  margin-bottom: 30px;
+  color: #dbeafe;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.ssms-register-features {
+  display: grid;
+  gap: 19px;
+}
+
+.ssms-register-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ssms-register-feature-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 13px;
+  color: #7dd3fc;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 20px;
+}
+
+.ssms-register-feature div {
+  display: grid;
+  gap: 4px;
+}
+
+.ssms-register-feature strong {
+  color: #fff;
+  font-size: 13px;
+}
+
+.ssms-register-feature div span {
+  color: #cbdff5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ssms-register-brand-footer {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #dbeafe;
+  font-size: 12px;
+}
+
+/* Register form */
+
+.ssms-register-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 34px 48px 22px;
+  background: #fff;
+}
+
+.ssms-register-form-wrap {
+  width: 100%;
+  max-width: 410px;
+  margin: auto;
+}
+
+.ssms-register-mobile-logo {
+  display: none;
+  margin-bottom: 30px;
+  color: #102c56;
+}
+
+.ssms-register-heading {
+  margin-bottom: 24px;
+}
+
+.ssms-register-welcome-icon {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+  border-radius: 14px;
+  color: #087eaa;
+  background: #e0f2fe;
+  font-size: 23px;
+}
+
+.ssms-register-kicker {
+  margin-bottom: 7px;
+  color: #0284c7;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ssms-register-heading h2 {
+  margin-bottom: 8px;
+  color: #14253d;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+}
+
+.ssms-register-heading > p:last-child {
+  margin-bottom: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.ssms-register-field {
+  margin-bottom: 16px;
+}
+
+.ssms-register-field label {
+  display: block;
+  margin-bottom: 7px;
+  color: #24364b;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.ssms-register-input-wrap {
+  min-height: 47px;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 13px;
+  border: 1px solid #dbe3ed;
+  border-radius: 11px;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.ssms-register-input-wrap:focus-within {
+  border-color: #0284c7;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1);
+}
+
+.ssms-register-input-wrap > i {
+  flex-shrink: 0;
+  color: #64748b;
+  font-size: 16px;
+}
+
+.ssms-register-input-wrap input,
+.ssms-register-input-wrap select {
+  width: 100%;
+  min-width: 0;
+  padding: 12px 0;
+  border: 0;
+  outline: none;
+  color: #172b45;
+  background: transparent;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.ssms-register-input-wrap input::placeholder {
+  color: #94a3b8;
+}
+
+.ssms-register-input-wrap select {
+  flex: 1;
+  appearance: none;
+  cursor: pointer;
+}
+
+.ssms-register-input-wrap .ssms-register-select-arrow {
+  font-size: 12px;
+  pointer-events: none;
+}
+
+.ssms-register-password-toggle {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border: 0;
+  border-radius: 6px;
+  color: #64748b;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ssms-register-password-toggle:hover {
+  color: #0284c7;
+}
+
+.ssms-register-help {
+  margin: 6px 0 0;
+  color: #64748b;
+  font-size: 10px;
+}
+
+.ssms-register-button {
+  width: 100%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 11px;
+  color: #fff;
+  background: linear-gradient(100deg, #1264a3, #0284c7);
+  box-shadow: 0 8px 18px rgba(2, 132, 199, 0.2);
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ssms-register-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.28);
+}
+
+.ssms-register-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ssms-register-login-prompt {
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 12px;
+  text-align: center;
+}
+
+.ssms-register-login-prompt a {
+  color: #0277b5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ssms-register-login-prompt a:hover {
+  text-decoration: underline;
+}
+
+.ssms-register-security {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 22px;
+  color: #64748b;
+  font-size: 10px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.ssms-register-security i {
+  flex-shrink: 0;
+  color: #0891b2;
+  font-size: 14px;
+}
+
+.ssms-register-panel-footer {
+  padding-top: 20px;
+  color: #94a3b8;
+  font-size: 10px;
+  text-align: center;
+}
+
+.ssms-register-page .alert {
+  font-size: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .ssms-register-page {
+    padding: 18px;
+  }
+
+  .ssms-register-layout {
+    max-width: 600px;
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .ssms-register-brand {
+    display: none;
+  }
+
+  .ssms-register-panel {
+    padding: 34px 32px 22px;
+  }
+
+  .ssms-register-mobile-logo {
+    display: flex;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+  .ssms-register-page {
+    padding: 0;
+    align-items: stretch;
+    background: #fff;
+  }
+
+  .ssms-register-layout {
+    min-height: 100vh;
+    min-height: 100dvh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .ssms-register-panel {
+    padding: 25px 22px 18px;
+  }
+
+  .ssms-register-mobile-logo {
+    margin-bottom: 28px;
+    font-size: 20px;
+  }
+
+  .ssms-register-heading h2 {
+    font-size: 25px;
+  }
+
+  .ssms-register-field {
+    margin-bottom: 15px;
+  }
+}

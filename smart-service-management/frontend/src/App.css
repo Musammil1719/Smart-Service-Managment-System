@@ -1,0 +1,658 @@
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.app-navbar {
+  box-shadow: 0 0.25rem 1rem rgb(15 23 42 / 12%);
+}
+
+.app-shell {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 16rem minmax(0, 1fr);
+  grid-template-rows: 4.5rem minmax(0, 1fr);
+  grid-template-areas:
+    "header header"
+    "sidebar content";
+  transition: grid-template-columns 180ms ease;
+}
+
+.app-shell.sidebar-collapsed {
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+}
+
+.app-header {
+  grid-area: header;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.25rem;
+  background-color: var(--bs-primary);
+  box-shadow: var(--ssms-shadow);
+}
+
+.app-header-brand {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.app-header-brand .navbar-brand {
+  margin: 0;
+}
+
+.app-sidebar-toggle {
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.75rem;
+  text-decoration: none;
+}
+
+.app-header-account {
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 50%;
+}
+
+.app-sidebar {
+  position: sticky;
+  top: 0;
+  grid-area: sidebar;
+  display: flex;
+  min-width: 0;
+  height: calc(100vh - 4.5rem);
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  align-self: start;
+  padding: 1rem 0.75rem;
+  overflow-x: visible;
+  overflow-y: auto;
+  background-color: var(--ssms-sidebar);
+  box-shadow: 0.125rem 0 0.5rem rgb(31 41 55 / 6%);
+  transition: width 180ms ease, padding 180ms ease;
+}
+
+.sidebar-navigation {
+  width: 100%;
+  align-items: stretch;
+}
+
+.app-sidebar .navbar-nav {
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.25rem !important;
+}
+
+.app-sidebar .navbar-nav .nav-link {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.7rem 0.65rem;
+  color: var(--ssms-text);
+  white-space: nowrap;
+}
+
+.app-sidebar .navbar-nav .nav-link:hover,
+.app-sidebar .navbar-nav .nav-link.active {
+  color: #fff;
+  background-color: var(--ssms-primary);
+  border-radius: 0.4rem;
+}
+
+.sidebar-icon {
+  flex: 0 0 1.25rem;
+  width: 1.25rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.sidebar-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-main-content {
+  grid-area: content;
+  min-width: 0;
+  padding-top: 0.75rem;
+}
+
+.account-menu {
+  position: relative;
+}
+
+.account-menu-toggle {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.account-popover {
+  position: absolute;
+  z-index: 1060;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  width: min(22rem, calc(100vw - 2rem));
+  max-height: min(75vh, 38rem);
+  overflow-y: auto;
+  padding: 1rem;
+  color: var(--ssms-text);
+  background: var(--ssms-surface);
+  border: 1px solid var(--ssms-border);
+  border-radius: 0.75rem;
+}
+
+.sidebar-collapsed .app-sidebar {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.sidebar-collapsed .sidebar-label {
+  display: none;
+}
+
+.sidebar-collapsed .app-sidebar .navbar-nav .nav-link {
+  justify-content: center;
+  gap: 0;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.auth-page {
+  min-height: calc(100vh - 4.5rem);
+  display: flex;
+  align-items: center;
+}
+
+.auth-page > .row {
+  width: 100%;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 30rem;
+  margin-inline: auto;
+  border-radius: 1rem;
+}
+
+.auth-icon,
+.dashboard-icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  background: #DBEAFE;
+  color: var(--ssms-primary);
+  font-size: 1.5rem;
+}
+
+.dashboard-icon {
+  flex: 0 0 4.25rem;
+  width: 4.25rem;
+  height: 4.25rem;
+  font-size: 1.8rem;
+}
+
+.dashboard-welcome {
+  border-radius: 1rem;
+}
+
+.service-page {
+  min-height: calc(100vh - 4.5rem);
+}
+
+.service-card,
+.service-table-card {
+  border-radius: 1rem;
+}
+
+.service-description-cell {
+  max-width: 22rem;
+}
+
+.service-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1055;
+  overflow-y: auto;
+  background: rgb(15 23 42 / 55%);
+}
+
+.service-modal-backdrop .modal {
+  position: relative;
+  min-height: 100%;
+}
+
+.notification-count {
+  position: absolute;
+  top: -0.45rem;
+  right: -0.45rem;
+  min-width: 1.25rem;
+}
+
+.sidebar-notification-icon {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 1.25rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-header-notifications {
+  position: relative;
+  display: inline-flex;
+  width: 2.75rem;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.app-header-notifications:hover,
+.app-header-notifications:focus-visible {
+  color: #fff;
+  background: rgb(255 255 255 / 15%);
+}
+
+.notification-item {
+  position: relative;
+  padding: 1.25rem 1.5rem;
+  background: var(--ssms-surface);
+  border-bottom: 1px solid var(--ssms-border);
+}
+
+.notification-item.notification-unread {
+  border-left: 0.25rem solid #DC2626;
+}
+
+.notification-item.notification-read {
+  background: var(--ssms-surface);
+  border-left: 0.25rem solid #93C5FD;
+}
+
+.notification-item-compact {
+  padding: 1rem 1.25rem;
+  font-size: 0.875rem;
+}
+
+.notification-message {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.notification-title {
+  overflow-wrap: anywhere;
+}
+
+.notification-status {
+  flex: 0 0 auto;
+  margin-top: 0.05rem;
+}
+
+.notification-status-read {
+  color: #1D4ED8;
+  background: #DBEAFE;
+}
+
+.notification-status-unread {
+  color: #fff;
+  background: #DC2626;
+}
+
+.notification-list-card {
+  border-radius: 0.875rem;
+}
+
+.notification-page-header {
+  border-bottom: 1px solid var(--ssms-border);
+}
+
+.notification-page-icon {
+  flex: 0 0 3rem;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: var(--ssms-primary);
+  background: #DBEAFE;
+  border-radius: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.notification-item .notification-open {
+  cursor: pointer;
+}
+
+.notification-item.notification-unread:hover {
+  background-color: #F9FAFB;
+}
+
+.notification-item:focus-within {
+  outline: 2px solid var(--ssms-primary);
+  outline-offset: -2px;
+}
+
+.notification-type-icon {
+  flex: 0 0 2rem;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--bs-light);
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.notification-open {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  border: 0;
+  background: transparent;
+}
+
+.notification-open:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: -3px;
+}
+
+.notification-action {
+  position: relative;
+  z-index: 2;
+}
+
+.notification-page {
+  min-height: calc(100vh - 4.5rem);
+}
+
+.admin-dashboard {
+  min-height: calc(100vh - 4.5rem);
+}
+
+.admin-analytics-card,
+.admin-metric-card {
+  border-radius: 1rem;
+}
+
+.admin-metric-icon {
+  flex: 0 0 3rem;
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.875rem;
+  font-size: 1.25rem;
+}
+
+.admin-service-stat {
+  min-width: 0;
+}
+
+.admin-review {
+  min-width: 0;
+  background: var(--bs-light);
+}
+
+.admin-monthly-chart {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.75rem 0.5rem;
+}
+
+.admin-month-column {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.375rem;
+  overflow: hidden;
+}
+
+.admin-month-bars {
+  display: flex;
+  width: 100%;
+  height: 7rem;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.2rem;
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+.admin-month-bar {
+  width: min(35%, 1rem);
+  min-height: 0;
+  border-radius: 0.25rem 0.25rem 0 0;
+}
+
+/* Shared light theme for Bootstrap surfaces used throughout every page. */
+.app-main-content {
+  background: var(--ssms-page);
+}
+
+.app-main-content .card,
+.app-main-content .modal-content {
+  color: var(--ssms-text);
+  background-color: var(--ssms-surface);
+  border: 1px solid var(--ssms-border) !important;
+  box-shadow: var(--ssms-shadow) !important;
+}
+
+.app-main-content .card-header,
+.app-main-content .card-footer,
+.app-main-content .modal-header,
+.app-main-content .modal-footer {
+  background-color: var(--ssms-surface);
+  border-color: var(--ssms-border);
+}
+
+.app-main-content .table {
+  --bs-table-color: var(--ssms-text);
+  --bs-table-bg: var(--ssms-surface);
+  --bs-table-border-color: var(--ssms-border);
+  margin-bottom: 0;
+}
+
+.app-main-content .table > :not(caption) > * > * {
+  padding: 0.8rem 0.9rem;
+  border-bottom-color: var(--ssms-border);
+}
+
+.app-main-content .table > thead > tr > th,
+.app-main-content .table-light {
+  --bs-table-color: var(--ssms-text);
+  --bs-table-bg: var(--ssms-page);
+}
+
+.app-main-content .table-hover > tbody > tr:hover > * {
+  --bs-table-bg-state: #F9FAFB;
+}
+
+.app-main-content .form-control,
+.app-main-content .form-select {
+  color: var(--ssms-text);
+  background-color: var(--ssms-surface);
+  border-color: var(--ssms-border);
+}
+
+.app-main-content .form-control::placeholder {
+  color: var(--ssms-muted);
+  opacity: 1;
+}
+
+.app-main-content .form-control:focus,
+.app-main-content .form-select:focus {
+  border-color: var(--ssms-primary);
+  box-shadow: 0 0 0 0.2rem rgb(37 99 235 / 20%);
+}
+
+.app-main-content .form-label,
+.app-main-content legend {
+  color: var(--ssms-text);
+}
+
+.app-main-content .form-text,
+.app-main-content .text-body-secondary {
+  color: var(--ssms-muted) !important;
+}
+
+.app-main-content .btn-primary {
+  --bs-btn-bg: var(--ssms-primary);
+  --bs-btn-border-color: var(--ssms-primary);
+  --bs-btn-hover-bg: var(--ssms-primary-hover);
+  --bs-btn-hover-border-color: var(--ssms-primary-hover);
+  --bs-btn-active-bg: var(--ssms-primary-hover);
+  --bs-btn-active-border-color: var(--ssms-primary-hover);
+}
+
+.app-main-content .dropdown-menu {
+  color: var(--ssms-text);
+  background-color: var(--ssms-surface);
+  border-color: var(--ssms-border);
+}
+
+.app-main-content .dropdown-item {
+  color: var(--ssms-text);
+}
+
+.app-main-content .dropdown-item:hover,
+.app-main-content .dropdown-item:focus {
+  background-color: var(--ssms-page);
+}
+
+.account-popover {
+  box-shadow: var(--ssms-shadow);
+}
+
+.service-modal-backdrop {
+  background: rgb(31 41 55 / 45%);
+}
+
+.app-sidebar .navbar-nav .nav-link:hover,
+.app-sidebar .navbar-nav .nav-link.active {
+  color: #fff;
+}
+
+.app-sidebar .navbar-nav .nav-link:focus-visible {
+  outline: 2px solid var(--ssms-primary);
+  outline-offset: 2px;
+}
+
+.app-sidebar .nav-link:not(.active):hover {
+  color: var(--ssms-text);
+  background-color: rgb(255 255 255 / 60%);
+}
+
+.app-sidebar .nav-link:not(.active):focus-visible {
+  color: var(--ssms-text);
+}
+
+.app-sidebar .nav-link.active:focus-visible {
+  outline-color: #fff;
+}
+
+.app-header-account {
+  color: #fff;
+}
+
+.table-responsive {
+  border-radius: inherit;
+}
+
+.app-main-content img,
+.app-main-content svg {
+  max-width: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .app-shell {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .app-shell.sidebar-collapsed {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-navigation {
+    display: none;
+    padding: 0.25rem 0.75rem 0.75rem;
+  }
+
+  .app-sidebar.sidebar-menu-open .sidebar-navigation {
+    display: block;
+  }
+
+  .sidebar-collapsed .sidebar-label {
+    display: inline;
+  }
+
+  .sidebar-collapsed .app-sidebar .navbar-nav .nav-link {
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+
+  .app-header {
+    position: relative;
+    z-index: 1040;
+    min-height: 4.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .app-header-brand {
+    gap: 0.2rem;
+  }
+
+  .app-sidebar-toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .account-menu {
+    max-width: min(22rem, calc(100vw - 2rem));
+  }
+
+  .account-menu-toggle {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .notification-item {
+    padding: 1rem;
+  }
+
+  .notification-page-header .btn {
+    flex: 1 1 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .admin-monthly-chart {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+}

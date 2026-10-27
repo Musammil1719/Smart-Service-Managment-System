@@ -1,0 +1,432 @@
+.ssms-login-page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f5f9;
+  font-family: inherit;
+}
+
+.ssms-login-layout {
+  width: 100%;
+  max-width: 1180px;
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.12);
+}
+
+/* Left branding panel */
+
+.ssms-login-brand {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 42px 44px 30px;
+  color: #fff;
+  background:
+    radial-gradient(ellipse at 10% 90%, rgba(56, 189, 248, 0.18), transparent 40%),
+    linear-gradient(145deg, #102c56 0%, #164e8b 55%, #087eaa 100%);
+}
+
+.ssms-brand-logo,
+.ssms-mobile-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  font-size: 22px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.ssms-brand-logo:hover {
+  color: #fff;
+}
+
+.ssms-brand-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 13px;
+  color: #fff;
+  background: #0ea5e9;
+  font-size: 22px;
+}
+
+.ssms-brand-highlight {
+  color: #38bdf8;
+}
+
+.ssms-brand-content {
+  margin: auto 0;
+  padding: 56px 0;
+}
+
+.ssms-eyebrow {
+  display: inline-block;
+  margin-bottom: 22px;
+  color: #bae6fd;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: 1.8;
+}
+
+.ssms-brand-content h1 {
+  margin: 0 0 22px;
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 800;
+  letter-spacing: -1.8px;
+  line-height: 1.12;
+}
+
+.ssms-brand-content h1 span {
+  color: #38bdf8;
+}
+
+.ssms-brand-content > p {
+  max-width: 390px;
+  margin-bottom: 32px;
+  color: #dbeafe;
+  font-size: 15px;
+  line-height: 1.9;
+}
+
+.ssms-feature-list {
+  display: grid;
+  gap: 20px;
+}
+
+.ssms-feature {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.ssms-feature-icon {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  color: #7dd3fc;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 20px;
+}
+
+.ssms-feature div {
+  display: grid;
+  gap: 4px;
+}
+
+.ssms-feature strong {
+  color: #fff;
+  font-size: 14px;
+}
+
+.ssms-feature div span {
+  color: #cbdff5;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ssms-brand-footer {
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  color: #dbeafe;
+  font-size: 12px;
+}
+
+/* Right login panel */
+
+.ssms-login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 54px 24px;
+  background: #fff;
+}
+
+.ssms-login-form-wrap {
+  width: 100%;
+  max-width: 390px;
+  margin: auto;
+}
+
+.ssms-mobile-logo {
+  display: none;
+  margin-bottom: 36px;
+  color: #102c56;
+}
+
+.ssms-form-heading {
+  margin-bottom: 32px;
+}
+
+.ssms-welcome-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  color: #087eaa;
+  background: #e0f2fe;
+  font-size: 24px;
+}
+
+.ssms-form-kicker {
+  margin-bottom: 8px;
+  color: #0284c7;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.ssms-form-heading h2 {
+  margin-bottom: 10px;
+  color: #14253d;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  line-height: 1.3;
+}
+
+.ssms-form-heading > p:last-child {
+  margin-bottom: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.ssms-field {
+  margin-bottom: 22px;
+}
+
+.ssms-field label {
+  display: block;
+  margin-bottom: 9px;
+  color: #24364b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.ssms-input-wrap {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 15px;
+  border: 1px solid #dbe3ed;
+  border-radius: 12px;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.ssms-input-wrap:focus-within {
+  border-color: #0284c7;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.1);
+}
+
+.ssms-input-wrap > i {
+  flex-shrink: 0;
+  color: #64748b;
+  font-size: 17px;
+}
+
+.ssms-input-wrap input {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 0;
+  border: 0;
+  outline: none;
+  color: #172b45;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.ssms-input-wrap input::placeholder {
+  color: #94a3b8;
+}
+
+.ssms-password-toggle {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border: 0;
+  border-radius: 6px;
+  color: #64748b;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ssms-password-toggle:hover {
+  color: #0284c7;
+}
+
+.ssms-login-button {
+  width: 100%;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(100deg, #1264a3, #0284c7);
+  box-shadow: 0 8px 18px rgba(2, 132, 199, 0.2);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ssms-login-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(2, 132, 199, 0.28);
+}
+
+.ssms-login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.ssms-register-prompt {
+  margin-top: 26px;
+  color: #64748b;
+  font-size: 12px;
+  text-align: center;
+}
+
+.ssms-register-prompt a {
+  color: #0277b5;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.ssms-register-prompt a:hover {
+  text-decoration: underline;
+}
+
+.ssms-security-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+  color: #64748b;
+  font-size: 11px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.ssms-security-note i {
+  color: #0891b2;
+  font-size: 15px;
+}
+
+.ssms-panel-footer {
+  padding-top: 24px;
+  color: #94a3b8;
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Tablet and mobile */
+
+.ssms-loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: #475569;
+}
+
+@media (max-width: 900px) {
+  .ssms-login-page {
+    padding: 18px;
+  }
+
+  .ssms-login-layout {
+    max-width: 600px;
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .ssms-login-brand {
+    display: none;
+  }
+
+  .ssms-login-panel {
+    padding: 40px 32px 24px;
+  }
+
+  .ssms-mobile-logo {
+    display: flex;
+  }
+
+  .ssms-form-heading h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ssms-login-page {
+    padding: 0;
+    align-items: stretch;
+    background: #fff;
+  }
+
+  .ssms-login-layout {
+    min-height: 100vh;
+    min-height: 100dvh;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .ssms-login-panel {
+    padding: 28px 22px 20px;
+  }
+
+  .ssms-mobile-logo {
+    margin-bottom: 42px;
+    font-size: 20px;
+  }
+
+  .ssms-form-heading {
+    margin-bottom: 28px;
+  }
+
+  .ssms-form-heading h2 {
+    font-size: 25px;
+  }
+
+  .ssms-welcome-icon {
+    margin-bottom: 18px;
+  }
+
+  .ssms-security-note {
+    margin-top: 24px;
+  }
+}

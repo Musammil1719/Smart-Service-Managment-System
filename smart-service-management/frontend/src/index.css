@@ -1,0 +1,40 @@
+:root {
+  color-scheme: light;
+  --ssms-page: #F3F4F6;
+  --ssms-sidebar: #E5E7EB;
+  --ssms-surface: #FFFFFF;
+  --ssms-primary: #2563EB;
+  --ssms-primary-hover: #1D4ED8;
+  --ssms-text: #1F2937;
+  --ssms-muted: #6B7280;
+  --ssms-border: #D1D5DB;
+  --ssms-shadow: 0 0.125rem 0.5rem rgb(31 41 55 / 7%);
+  --bs-primary: var(--ssms-primary);
+  --bs-primary-rgb: 37, 99, 235;
+  --bs-body-color: var(--ssms-text);
+  --bs-body-bg: var(--ssms-page);
+  --bs-border-color: var(--ssms-border);
+  --bs-light: var(--ssms-page);
+  --bs-light-rgb: 243, 244, 246;
+  --bs-link-color: var(--ssms-primary);
+  --bs-link-hover-color: var(--ssms-primary-hover);
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ssms-text);
+  background: var(--ssms-page);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ssms-text);
+  background: var(--ssms-page);
+}
